@@ -47,6 +47,8 @@ var graph = [[1, 2, 3], [3], [1, 3], [1], [], [2]];
 }
     function draw() {
       background(255);
+      // Draw nodes
+    
       for (var i = 0; i < nodes.length; i++) {
         fill(0);
         ellipse(nodes[i].x, nodes[i].y, 40, 40);
@@ -66,7 +68,6 @@ var graph = [[1, 2, 3], [3], [1, 3], [1], [], [2]];
             text(edges[i].weight, midX, midY);
         } 
     }
-// Draw nodes
-    
+
     
     }
