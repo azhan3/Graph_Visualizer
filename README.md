@@ -13,8 +13,6 @@ Purpose:
 * Shows code and location of breakpoints
 
 Goal:
-* Resume
-* Show off programming skills; visualizing is a “wow factor”
 * We want competitive programmers using this program
 
 Tools:
