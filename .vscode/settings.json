@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "type_traits": "cpp",
+        "deque": "cpp",
+        "vector": "cpp",
+        "exception": "cpp",
+        "functional": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "streambuf": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp"
+    }
+}
