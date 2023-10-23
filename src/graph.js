@@ -20,10 +20,15 @@ function generate_rand_adj(count, edge_prob, weighted, lo, hi) {
   return adj;
 }
 
-adj = generate_rand_adj(25, 5, false, 0, 0);
+adj = generate_rand_adj(5, 50, false, 0, 0);
 
-//adj = [[1, 2, 3], [0, 2, 3], [0,1,3], []];
+adj = [[1, 3], [2], [3], [0, 1]];
+
+var highlight = [0, 6, 4, 3, 7]
+highlight = []
+
 var nodes = [];
+
 var edges = [];
 var radius = 200; // radius of the circle
 var centerX = 500; // x-coordinate of the center of the circle
@@ -39,6 +44,7 @@ for (var i = 0; i < adj.length; i++) {
   var y = Math.round(centerY + radius * Math.sin(angle));
   nodes.push({ x: x, y: y, label: i });
 }
+console.log(nodes);
 // Create edges
 for (var i = 0; i < adj.length; i++) {
   for (var j = 0; j < adj[i].length; j++) {
@@ -63,8 +69,8 @@ for (var i = 0; i < nodes.length; i++) {
   node.classList.add("noselect");
   node.style.backgroundColor = "black";
   node.style.color = "white";
-  node.style.width = "50px";
-  node.style.height = "50px";
+  node.style.width = "42px";
+  node.style.height = "42px";
   node.style.position = "absolute";
   node.style.left = nodes[i].x + "px";
   node.style.top = nodes[i].y + "px";
@@ -75,6 +81,12 @@ for (var i = 0; i < nodes.length; i++) {
   graph.appendChild(node);
   node.style.zIndex = "10";
 }
+
+highlight.forEach(function(i) {
+  var node = document.getElementById(`node-${i}`);
+  node.style.boxShadow = "0 0 0 5px rgb(38, 226, 0)";
+});
+
 
 function drawArrow(x1, y1, x2, y2) {
   var arrowHead = document.createElement("div");

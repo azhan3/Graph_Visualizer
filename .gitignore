@@ -1,2 +1,3 @@
-./vscode
-./node_modules
+.vscode/
+src/node_modules/
+lib/cpp/test.cpp
